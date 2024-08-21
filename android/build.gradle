@@ -22,9 +22,11 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'com.ajinasokan.flutterdisplaymode'
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.ajinasokan.flutterdisplaymode'
+    }
 
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 16
